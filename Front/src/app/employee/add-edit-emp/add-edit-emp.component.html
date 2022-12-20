@@ -1,1 +1,35 @@
-<p>add-edit-emp works!</p>
+<div class="d-flex flex-row bd-height mb-3">
+  <div class="form-froup row" style="width: 60%;">
+    <label class="col-sm-2 col-form-label" formArrayName="control" >Employee Name</label>
+    <div>
+      <input type="text" class="form-control" [(ngModel)]="EmployeeName"
+      placeholder="Enter Employee Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label" formArrayName="control" >Department</label>
+    <div>
+      <!-- <input type="text" class="form-control" [(ngModel)]="EmployeeName"
+      placeholder="Enter Department Name"> -->
+      <select class="form-control" [(ngModel)]="Department">
+        <option value="">--Select--</option>
+        <option *ngFor="let depName of DepartmentList">{{depName.DepartmentName}}</option>
+      </select>
+    </div>
+
+    <label class="col-sm-2 col-form-label" formArrayName="control" >Date Of Joining</label>
+    <div>
+      <input type="date" class="form-control" [(ngModel)]="DateOfJoining">
+    </div>
+  </div>
+</div>
+<div class="ml-3 bd-highlight" style="width: 40%;">
+  <img [src]="PhotoFilePath" height="250px;" width="200px;" alt="">
+  <input type="file" (change)="uploadPhoto($event)" class="mt-2">
+</div>
+
+<button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+  Add
+</button>
+<button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+  Update
+</button>
