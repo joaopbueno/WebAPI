@@ -1,5 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+<button type="button" class="btn btn-primary float-right m-2"
+data-bs-toggle="modal" data-bs-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false">
   Add Employee
@@ -15,7 +16,7 @@ data-backdrop="static" data-keyboard="false">
         (click)="closeClick()"></button>
       </div>
       <div class="modal-body">
-        <app-add-edit-emp emp="emp" *ngIf="ActivateAddEditEmpComp"></app-add-edit-emp>
+        <app-add-edit-emp [emp]="emp" *ngIf="ActivateAddEditEmpComp"></app-add-edit-emp>
       </div>
     </div>
   </div>

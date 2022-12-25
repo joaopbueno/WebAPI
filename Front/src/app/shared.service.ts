@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SharedService {
   readonly APIUrl = "http://localhost:59466/api";
-  readonly PhotoUrl = "http://localhost:59466/Photos";
+  readonly PhotoUrl = "http://localhost:59466/Photos/";
 
   constructor(private http: HttpClient) { }
 

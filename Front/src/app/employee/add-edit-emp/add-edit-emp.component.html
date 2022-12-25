@@ -26,10 +26,11 @@
   <img [src]="PhotoFilePath" height="250px;" width="200px;" alt="">
   <input type="file" (change)="uploadPhoto($event)" class="mt-2">
 </div>
-
-<button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary">
+<!-- *ngIf="emp.EmployeeId==0" -->
+<!-- *ngIf="emp.EmployeeId!=0" -->
+<button (click)="addEmployee()" *ngIf="emp.EmployeeId==0" class="btn btn-primary" style="margin-top: 10px;">
   Add
 </button>
-<button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary">
+<button (click)="updateEmployee()" *ngIf="emp.EmployeeId!=0" class="btn btn-primary" style="margin-top: 10px;">
   Update
 </button>
